@@ -1,4 +1,4 @@
-# al-dexter does dotfiles (based on [holman/dotfiles](@holman/dotfiles))
+# al-dexter does dotfiles (based on [holman/dotfiles](https://github.com/holman/dotfiles))
 
 
 ## Topics
@@ -39,7 +39,7 @@ script/bootstrap
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
-The `zsh/zshrc.symlink` file contains [antigen](@zsh-users/antigen) initialization and customization.
+The `zsh/zshrc.symlink` file contains [antigen](https://github.com/zsh-users/antigen) initialization and customization.
 
 `dot` is a simple script that installs some dependencies, sets sane macOS
 defaults, and so on. Tweak this script, and occasionally run `dot` from
@@ -48,5 +48,5 @@ this script in `bin/`.
 
 ## Thanks
 
-[Zach Holman](@holman) for his
-[dotfiles](@holman/dotfiles) approach.
+[Zach Holman](https://github.com/holman) for his
+[dotfiles](https://github.com/holman/dotfiles) approach.

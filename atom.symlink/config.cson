@@ -6,6 +6,9 @@
       playAudio: true
       screenShake: true
   core:
+    disabledPackages: [
+      "exception-reporting"
+    ]
     restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
     themes: []
