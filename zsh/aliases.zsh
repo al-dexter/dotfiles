@@ -1,3 +1,2 @@
-alias reload!='. ~/.zshrc'
-
-alias cls='clear' # Good 'ol Clear Screen command
+alias c='clear'          # Clear terminal display
+alias reload='exec zsh'  # Reload the shell

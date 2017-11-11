@@ -1,9 +1,6 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
-# your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
-
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -17,34 +14,71 @@ typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 
 # load the path files
-for file in ${(M)config_files:#*/path.zsh}
+for pathfile in ${(M)config_files:#*/path.zsh}
 do
-  source $file
+  source $pathfile
 done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
-  source $file
-done
-
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-
-# load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}
+# load everything but the path files
+for file in ${${config_files:#*/path.zsh}}
 do
   source $file
 done
 
 unset config_files
 
-# Better history
-# Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+# do antigen magic
+if  (( $+commands[brew] )) && [[ -a `brew --prefix`/share/antigen/antigen.zsh ]]
+then
+  source `brew --prefix`/share/antigen/antigen.zsh
+
+  # Load the oh-my-zsh's library.
+  antigen use oh-my-zsh
+
+  # Bundles from the default repo (robbyrussell's oh-my-zsh).
+  antigen bundle adb
+  antigen bundle brew
+  antigen bundle cp
+  antigen bundle chucknorris
+  antigen bundle common-aliases
+  antigen bundle command-not-found
+  antigen bundle colored-man-pages
+  antigen bundle colorize
+  antigen bundle compleat
+  antigen bundle gem
+  antigen bundle git
+  antigen bundle git-extras
+  antigen bundle git-flow
+  antigen bundle git-remote-branch
+  antigen bundle gitignore
+  antigen bundle gradle
+  antigen bundle history
+  antigen bundle httpie
+  antigen bundle lol
+  antigen bundle node
+  antigen bundle npm
+  antigen bundle nvm
+  antigen bundle osx
+  antigen bundle thefuck
+  antigen bundle zsh-navigation-tools
+  antigen bundle zsh_reload
+
+
+  # Other bundles
+  antigen bundle chrissicool/zsh-256color
+  antigen bundle bobthecow/git-flow-completion
+  antigen bundle felixr/docker-zsh-completion
+  antigen bundle zsh-users/zsh-completions
+  antigen bundle zsh-users/zsh-syntax-highlighting
+  antigen bundle zsh-users/zsh-history-substring-search
+  antigen bundle zsh-users/zsh-autosuggestions
+  antigen bundle vasyharan/zsh-brew-services
+  antigen bundle the8/terminal-app.zsh
+
+  # Load the theme.
+  antigen theme agnoster
+
+  # Tell Antigen that you're done.
+  antigen apply
+
+fi
