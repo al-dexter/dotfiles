@@ -44,9 +44,9 @@ then
   antigen bundle command-not-found
   antigen bundle colored-man-pages
   antigen bundle colorize
-  antigen bundle compleat
   antigen bundle gem
   antigen bundle git
+  antigen bundle github
   antigen bundle git-extras
   antigen bundle git-flow
   antigen bundle git-remote-branch
@@ -59,21 +59,16 @@ then
   antigen bundle npm
   antigen bundle nvm
   antigen bundle osx
-  antigen bundle thefuck
   antigen bundle zsh-navigation-tools
-  antigen bundle zsh_reload
+  antigen bundle thefuck
 
 
   # Other bundles
-  antigen bundle chrissicool/zsh-256color
-  antigen bundle bobthecow/git-flow-completion
-  antigen bundle felixr/docker-zsh-completion
+  antigen bundle zsh-users/zsh-autosuggestions
   antigen bundle zsh-users/zsh-completions
   antigen bundle zsh-users/zsh-syntax-highlighting
   antigen bundle zsh-users/zsh-history-substring-search
-  antigen bundle zsh-users/zsh-autosuggestions
   antigen bundle vasyharan/zsh-brew-services
-  antigen bundle the8/terminal-app.zsh
 
   # Load the theme.
   antigen theme agnoster
