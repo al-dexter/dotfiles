@@ -77,3 +77,7 @@ then
   antigen apply
 
 fi
+
+# some funny stuff
+# chuck | cowsay | lolcat
+# hello -g "Welcome Alex" | figlet -w 75 -f smslant | lolcat
