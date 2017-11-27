@@ -7,9 +7,9 @@ export LANG=en_US.UTF-8
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-fpath=($ZSH/functions $fpath)
+fpath=($DOTFILES/functions $fpath)
 
-autoload -U $ZSH/functions/*(:t)
+autoload -U $DOTFILES/functions/*(:t)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=30000
