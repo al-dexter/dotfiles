@@ -19,6 +19,9 @@ defaults write com.apple.Finder FXPreferredViewStyle clmv
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
+# change default screenshot folder
+defaults write com.apple.screencapture location ~/Screenshots
+
 # Set a really fast key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 1
 
