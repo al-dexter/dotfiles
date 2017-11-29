@@ -11,7 +11,10 @@
     ]
     restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
-    themes: []
+    themes: [
+      "dracula-ui"
+      "dracula-syntax"
+    ]
   editor:
     invisibles: {}
   fonts:
