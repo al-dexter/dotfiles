@@ -40,6 +40,7 @@ then
 
   # Bundles from the default repo (robbyrussell's oh-my-zsh).
   antigen bundle adb
+  antigen bundle aws
   antigen bundle brew
   antigen bundle cp
   antigen bundle chucknorris
@@ -47,6 +48,8 @@ then
   antigen bundle command-not-found
   antigen bundle colored-man-pages
   antigen bundle colorize
+  antigen bundle docker
+  antigen bundle docker-compose
   antigen bundle gem
   antigen bundle git
   antigen bundle github
