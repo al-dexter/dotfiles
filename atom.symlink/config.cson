@@ -8,6 +8,7 @@
   core:
     disabledPackages: [
       "exception-reporting"
+      "markdown-preview"
     ]
     restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
