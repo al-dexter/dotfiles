@@ -52,11 +52,11 @@ then
   antigen bundle docker-compose
   antigen bundle gem
   antigen bundle git
-  antigen bundle github
   antigen bundle git-extras
-  antigen bundle git-flow
+  antigen bundle github
   antigen bundle git-remote-branch
   antigen bundle gitignore
+  antigen bundle globalias
   antigen bundle gradle
   antigen bundle history
   antigen bundle httpie
