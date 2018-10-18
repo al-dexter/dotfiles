@@ -56,7 +56,6 @@ then
   antigen bundle github
   antigen bundle git-remote-branch
   antigen bundle gitignore
-  antigen bundle globalias
   antigen bundle gradle
   antigen bundle history
   antigen bundle httpie
