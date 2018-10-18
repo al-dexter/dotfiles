@@ -6,7 +6,7 @@
 globalias() {
    zle _expand_alias
    #zle expand-word
-   zle self-insert
+   #zle self-insert
 }
 zle -N globalias
 
