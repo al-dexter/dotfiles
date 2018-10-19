@@ -17,6 +17,10 @@ HISTFILE=~/.zsh_history
 HISTSIZE=30000
 SAVEHIST=30000
 
+# fix for the slow paste
+zstyle ':completion:*' menu select
+zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+
 setopt HIST_IGNORE_SPACE
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
