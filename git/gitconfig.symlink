@@ -29,3 +29,11 @@
         rebase = true
 [rebase]
         autostash = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Alexander Bershadsky
+	email = a.bershadskyy@ryte.com

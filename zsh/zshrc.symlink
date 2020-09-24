@@ -39,8 +39,8 @@ then
   antigen theme agnoster/agnoster-zsh-theme
 
   # Bundles from the default repo (robbyrussell's oh-my-zsh).
-  antigen bundle adb
   antigen bundle aws
+  antigen bundle alias-finder
   antigen bundle brew
   antigen bundle cp
   antigen bundle chucknorris
@@ -54,16 +54,18 @@ then
   antigen bundle git
   antigen bundle git-extras
   antigen bundle github
-  antigen bundle git-remote-branch
   antigen bundle gitignore
-  antigen bundle gradle
   antigen bundle history
   antigen bundle httpie
   antigen bundle node
   antigen bundle npm
   antigen bundle nvm
+  antigen bundle scala
+  antigen bundle sbt
+  antigen bundle sfdx
   antigen bundle osx
   antigen bundle zsh-navigation-tools
+  antigen bundle zsh-interactive-cd
   antigen bundle thefuck
 
 
@@ -83,3 +85,13 @@ fi
 # some funny stuff
 # chuck | cowsay | lolcat
 # hello -g "Welcome Alex" | figlet -w 75 -f smslant | lolcat
+
+unalias cp
+alias ls='exa'
+
+# added by travis gem
+[ -f /Users/alex.bershadsky/.travis/travis.sh ] && source /Users/alex.bershadsky/.travis/travis.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/alex.bershadsky/.sdkman"
+[[ -s "/Users/alex.bershadsky/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex.bershadsky/.sdkman/bin/sdkman-init.sh"
