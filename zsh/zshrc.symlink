@@ -50,6 +50,8 @@ then
   antigen bundle colorize
   antigen bundle docker
   antigen bundle docker-compose
+  antigen bundle kubectl
+  antigen bundle minikube
   antigen bundle gem
   antigen bundle git
   antigen bundle git-extras
