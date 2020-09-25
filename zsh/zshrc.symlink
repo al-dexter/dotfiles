@@ -89,7 +89,9 @@ fi
 # hello -g "Welcome Alex" | figlet -w 75 -f smslant | lolcat
 
 unalias cp
-alias ls='exa'
+alias la='exa -lha'
+alias ll='exa -lh'
+alias ls='exa --color=auto'
 
 # added by travis gem
 [ -f /Users/alex.bershadsky/.travis/travis.sh ] && source /Users/alex.bershadsky/.travis/travis.sh
