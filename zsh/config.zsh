@@ -32,5 +32,6 @@ setopt IGNORE_EOF
 setopt PROMPTSUBST
 
 setopt APPEND_HISTORY # adds history
+setopt INCAPPENDHISTORY
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS

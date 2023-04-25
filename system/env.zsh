@@ -2,5 +2,5 @@
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nano'
  else
-   export EDITOR='atom'
+   export EDITOR='code'
  fi
