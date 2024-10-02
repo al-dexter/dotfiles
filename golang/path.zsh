@@ -1,3 +1,4 @@
-export GOPATH=/usr/local/var/golang
-export GOROOT=/usr/local/opt/go/libexec
+export GOTOOLCHAIN=local
+export GOPATH=$HOMEBREW_PREFIX/go
+export GOROOT=$GOPATH/libexec
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH

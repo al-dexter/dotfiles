@@ -29,7 +29,6 @@ plugins=(
     command-not-found
     colored-man-pages
     colorize
-    docker
     docker-compose
     kubectl
     minikube
