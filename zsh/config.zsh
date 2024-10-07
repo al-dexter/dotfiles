@@ -8,6 +8,11 @@ export LANG=en_US.UTF-8
 
 # Compilation flags
 export ARCHFLAGS="-arch arm64"
+export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+
+# Fuzzy search
+source <(fzf --zsh)
 
 fpath=($DOTFILES/functions $fpath)
 
@@ -35,3 +40,21 @@ setopt APPEND_HISTORY # adds history
 setopt INCAPPENDHISTORY
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
+
+### ZNT's installer added snippet ###
+  fpath=( "$fpath[@]" "$HOME/.config/znt/zsh-navigation-tools" )
+  autoload n-aliases n-cd n-env n-functions n-history n-kill n-list n-list-draw n-list-input n-options n-panelize n-help
+  autoload znt-usetty-wrapper znt-history-widget znt-cd-widget znt-kill-widget
+  alias naliases=n-aliases ncd=n-cd nenv=n-env nfunctions=n-functions nhistory=n-history
+  alias nkill=n-kill noptions=n-options npanelize=n-panelize nhelp=n-help
+  zle -N znt-history-widget
+  bindkey '^R' znt-history-widget
+  setopt AUTO_PUSHD HIST_IGNORE_DUPS PUSHD_IGNORE_DUPS
+  zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
+  ### END ###
+
+# alias-finder
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
