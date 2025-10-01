@@ -6,3 +6,4 @@
 *.iml
 .vscode
 /IlluminatedCloud/
+.env
