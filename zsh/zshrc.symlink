@@ -31,22 +31,17 @@ plugins=(
     colorize
     docker-compose
     kubectl
-    minikube
-    gem
     git-extras
     github
     gitignore
     history
-    mvn
     node
     npm
-    sbt
-    sdk
     zsh-navigation-tools
     zsh-interactive-cd
     zsh-nvm
     zsh-syntax-highlighting
-    zsh-history-substring-search  
+    zsh-history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -70,15 +65,9 @@ done
 
 unset config_files
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/alex.bershadsky/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
-export PATH=$PATH:$(go env GOPATH)/bin
+
+# SDKMAN must remain last — do not move
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
