@@ -1,1 +1,2 @@
-export HOMEBREW_GITHUB_API_TOKEN=!"cat $HOME/.git-homebrew-token | tr -d \"\n\""
+# Set HOMEBREW_GITHUB_API_TOKEN in ~/.localrc to avoid API rate limits.
+# See localrc.example for the variable name.

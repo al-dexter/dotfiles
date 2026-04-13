@@ -1,0 +1,18 @@
+# Machine-specific config and secrets.
+# Copy to ~/.localrc — never commit that file.
+#
+#   cp localrc.example ~/.localrc
+#
+# Then fill in the values below.
+
+# GitHub token for Homebrew API rate limits (avoids 60 req/hr cap)
+# export HOMEBREW_GITHUB_API_TOKEN=
+
+# GCP project and credentials
+# export CLOUDSDK_CORE_PROJECT=
+# export GOOGLE_APPLICATION_CREDENTIALS=
+
+# Anthropic / Claude API key
+# export ANTHROPIC_API_KEY=
+
+# Git identity is managed separately — see git/gitconfig.local.symlink.example
