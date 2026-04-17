@@ -54,7 +54,6 @@ brew "python@3.13"
 
 # === Cloud & Infrastructure ===
 brew "awscli"
-cask "kiro-cli"
 brew "aws/tap/copilot-cli"
 brew "common-fate/granted/granted"
 brew "gh"
@@ -145,7 +144,6 @@ cask "qlstephen"
 cask "visual-studio-code"
 
 # === VS Code Extensions ===
-vscode "AmazonWebServices.amazon-q-vscode"
 vscode "ms-azuretools.vscode-docker"
 vscode "github.copilot-chat"
 vscode "golang.go"
