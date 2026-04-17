@@ -52,11 +52,6 @@ brew "php"
 brew "composer"
 
 # === Scala / JVM ===
-brew "openjdk"
-brew "sbt"
-brew "gradle"
-brew "gradle-completion"
-brew "maven"
 brew "coursier/formulas/coursier"
 brew "virtuslab/scala-cli/scala-cli"
 
