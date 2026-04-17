@@ -50,8 +50,7 @@ brew "nvm"
 brew "python@3.13"
 
 # === Scala / JVM ===
-brew "coursier/formulas/coursier"
-brew "virtuslab/scala-cli/scala-cli"
+# Managed by SDKMAN
 
 # === Cloud & Infrastructure ===
 brew "awscli"
@@ -74,8 +73,6 @@ brew "tflint"
 # === Databases ===
 brew "postgresql@14"
 brew "mariadb"
-brew "flyway"
-brew "parquet-cli"
 
 # === Dev Tools ===
 brew "git"
