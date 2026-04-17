@@ -74,7 +74,7 @@ brew "hashicorp/tap/terraform", link: false
 brew "kreuzwerker/taps/m1-terraform-provider-helper"
 cask "warrensbox/tap/tfswitch"
 brew "terraform-docs"
-brew "terraform_landscape"
+brew "tf-summarize"
 brew "tflint"
 
 # === Databases ===
