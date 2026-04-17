@@ -1,5 +1,5 @@
-export GOTOOLCHAIN=local
-export GOPATH=$HOME/go
-export GOROOT=$HOMEBREW_PREFIX/opt/go/libexec
-export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
-export ENABLE_LSP_TOOL=1
+export GOTOOLCHAIN="local"
+export GOPATH="$HOME/go"
+export GOROOT="$HOMEBREW_PREFIX/opt/go/libexec"
+export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
+export ENABLE_LSP_TOOL="1"
