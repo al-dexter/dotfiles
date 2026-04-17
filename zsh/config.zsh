@@ -67,3 +67,7 @@ fi
 if [ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]; then
   source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
+
+if [ -d "$HOMEBREW_PREFIX/share/zsh-history-substring-search" ]; then
+  source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+fi

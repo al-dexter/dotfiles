@@ -35,6 +35,7 @@ brew "tldr"
 brew "glow"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+brew "zsh-history-substring-search"
 brew "zsh-completions"
 
 # === Novelty ===

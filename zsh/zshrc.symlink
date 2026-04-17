@@ -39,7 +39,6 @@ plugins=(
     npm
     zsh-navigation-tools
     zsh-interactive-cd
-    zsh-history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
