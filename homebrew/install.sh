@@ -6,19 +6,24 @@
 # using Homebrew.
 
 # Check for Homebrew
-if test ! $(which brew)
-then
+# Detect Homebrew path based on architecture
+if [ "$(uname -m)" = "arm64" ]; then
+  BREW_PATH="/opt/homebrew/bin/brew"
+else
+  BREW_PATH="/usr/local/bin/brew"
+fi
+
+if ! command -v brew >/dev/null 2>&1 && [ ! -x "$BREW_PATH" ]; then
   echo "  Installing Homebrew for you."
 
-  # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+  # Install the official homebrew for each OS type
+  if [ "$(uname)" = "Darwin" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
-
+else
+  echo "  Homebrew already installed."
 fi
 
 exit 0

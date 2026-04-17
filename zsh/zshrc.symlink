@@ -51,8 +51,11 @@ typeset -U config_files
 config_files=($DOTFILES/**/*.zsh)
 
 unset PATH
-# load the path files
-for pathfile in ${(M)config_files:#*/path.zsh}
+# load the base path file first
+source $DOTFILES/system/path.zsh
+
+# load the rest of the path files
+for pathfile in ${${(M)config_files:#*/path.zsh}:#$DOTFILES/system/path.zsh}
 do
   source $pathfile
 done
