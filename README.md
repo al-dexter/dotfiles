@@ -17,22 +17,22 @@ Everything's built around topic areas. If you're adding a new area — say, "rus
 
 | Topic | Purpose |
 |-------|---------|
-| `coursier` | Coursier (Scala artifact manager) path |
-| `docker` | Docker CLI completions |
+| `coursier` | Coursier (Scala artifact manager) configuration |
+| `docker` | Docker CLI completions and environment |
 | `gcp` | Google Cloud SDK path and config |
 | `git` | Git config (symlinked) and git-extras completions |
-| `golang` | Go path and environment |
-| `homebrew` | Homebrew environment setup |
-| `java` | Java path via jenv |
-| `k8s` | kubectl config |
-| `nvm` | Node Version Manager config |
+| `golang` | Go path and environment ($GOPATH, GOROOT) |
+| `homebrew` | Homebrew environment setup and Brewfile management |
+| `java` | Java environment (managed via SDKMAN) |
+| `k8s` | Kubernetes CLI (kubectl) config |
+| `nvm` | Node Version Manager config (with lazy-loading) |
 | `python` | Python 3 path and environment |
 | `rust` | Rust/Cargo path |
-| `scala` | Scala path |
-| `spark` | Spark path |
-| `system` | Core PATH, editor, locale |
+| `scala` | Scala path and configuration |
+| `spark` | Apache Spark path |
+| `system` | Core PATH ordering, base environment, editor, locale |
 | `vim` | Vim config (symlinked) |
-| `zsh` | Shell config, aliases, history, completions |
+| `zsh` | Shell config, aliases, history, and explicit plugin sourcing |
 
 ## Machine-Specific Config
 
