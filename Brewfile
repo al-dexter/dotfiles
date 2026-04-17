@@ -72,7 +72,7 @@ brew "act"
 brew "datawire/blackbird/telepresence"
 brew "hashicorp/tap/terraform", link: false
 brew "kreuzwerker/taps/m1-terraform-provider-helper"
-brew "warrensbox/tap/tfswitch"
+cask "warrensbox/tap/tfswitch"
 brew "terraform-docs"
 brew "terraform_landscape"
 brew "tflint"
