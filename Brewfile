@@ -9,6 +9,7 @@ tap "virtuslab/scala-cli"
 tap "warrensbox/tap"
 
 # === Core CLI ===
+brew "google/gemini-cli/gemini-cli"
 brew "ack"
 brew "coreutils"
 brew "curl"
@@ -54,7 +55,7 @@ brew "virtuslab/scala-cli/scala-cli"
 
 # === Cloud & Infrastructure ===
 brew "awscli"
-cask "amazon-q"
+cask "kiro-cli"
 brew "aws/tap/copilot-cli"
 brew "common-fate/granted/granted"
 brew "gh"
@@ -148,6 +149,10 @@ cask "visual-studio-code"
 
 # === VS Code Extensions ===
 vscode "AmazonWebServices.amazon-q-vscode"
+vscode "ms-azuretools.vscode-docker"
+vscode "github.copilot-chat"
+vscode "golang.go"
+vscode "ms-azuretools.vscode-containers"
 vscode "dbaeumer.vscode-eslint"
 vscode "jeff-hykin.better-shellscript-syntax"
 vscode "mikestead.dotenv"
