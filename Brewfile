@@ -54,6 +54,7 @@ brew "virtuslab/scala-cli/scala-cli"
 
 # === Cloud & Infrastructure ===
 brew "awscli"
+cask "amazon-q"
 brew "aws/tap/copilot-cli"
 brew "common-fate/granted/granted"
 brew "gh"
@@ -147,7 +148,7 @@ cask "sf"
 cask "visual-studio-code"
 
 # === VS Code Extensions ===
-vscode "amazonwebservices.codewhisperer-for-command-line-companion"
+vscode "AmazonWebServices.amazon-q-vscode"
 vscode "dbaeumer.vscode-eslint"
 vscode "dotiful.dotfiles-syntax-highlighting"
 vscode "dragos.scala-lsp"
