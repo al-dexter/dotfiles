@@ -39,8 +39,6 @@ plugins=(
     npm
     zsh-navigation-tools
     zsh-interactive-cd
-    zsh-nvm
-    zsh-syntax-highlighting
     zsh-history-substring-search
 )
 

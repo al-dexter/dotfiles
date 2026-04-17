@@ -4,3 +4,7 @@ alias gbrg='git branch -vv | grep "origin/.*: gone]" | cut -d" " -f3 | xargs git
 alias la='lsd -lha'
 alias ll='lsd -lh'
 alias ls='lsd --color=auto'
+
+alias s='rg'
+alias ..='cd ..'
+alias ...='cd ../..'
