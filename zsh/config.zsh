@@ -59,6 +59,12 @@ zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
+# Ensure zsh contrib functions (e.g. up-line-or-beginning-search) are findable
+# before zsh-autosuggestions wraps existing widgets; OMZ's key-bindings.zsh
+# registers this widget but the function file lives in the Homebrew zsh path.
+fpath=("$HOMEBREW_PREFIX/share/zsh/functions" "${fpath[@]}")
+autoload -Uz up-line-or-beginning-search
+
 # Source plugins from Homebrew
 if [ -d "$HOMEBREW_PREFIX/share/zsh-autosuggestions" ]; then
   source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
