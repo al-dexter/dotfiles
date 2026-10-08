@@ -32,7 +32,7 @@ plugins=(
     docker-compose
     kubectl
     git-extras
-    github
+    gh
     gitignore
     history
     node
@@ -75,3 +75,22 @@ export SDKMAN_DIR="$HOME/.sdkman"
 if [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
   source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
+
+# bun completions
+[ -s "/Users/alex.bershadsky/.bun/_bun" ] && source "/Users/alex.bershadsky/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+
+alias claude-mem='bun "/Users/alex.bershadsky/.claude/plugins/cache/thedotmack/claude-mem/12.3.8/scripts/worker-service.cjs"'
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/alex.bershadsky/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# direnv — per-directory env loading (Maven mirror, etc.)
+eval "$(direnv hook zsh)"
