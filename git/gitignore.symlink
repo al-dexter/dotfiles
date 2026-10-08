@@ -7,3 +7,10 @@
 .vscode
 /IlluminatedCloud/
 .env
+
+# RuFlo / AgentDB artifacts
+.swarm/
+agentdb.rvf
+*.rvf
+*.rvf.lock
+ruvector.db
