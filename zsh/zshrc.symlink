@@ -77,7 +77,7 @@ if [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
 fi
 
 # bun completions
-[ -s "/Users/alex.bershadsky/.bun/_bun" ] && source "/Users/alex.bershadsky/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -85,9 +85,19 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 . "$HOME/.local/bin/env"
 
-alias claude-mem='bun "/Users/alex.bershadsky/.claude/plugins/cache/thedotmack/claude-mem/12.3.8/scripts/worker-service.cjs"'
+# claude-mem worker — resolve the installed version at call time so plugin updates don't break it
+claude-mem() {
+  local registry="$HOME/.claude/plugins/installed_plugins.json"
+  local install_path
+  install_path=$(jq -r '.plugins["claude-mem@thedotmack"][0].installPath // empty' "$registry" 2>/dev/null)
+  if [[ -z "$install_path" || ! -f "$install_path/scripts/worker-service.cjs" ]]; then
+    echo "claude-mem: plugin not installed (no entry in $registry)" >&2
+    return 1
+  fi
+  bun "$install_path/scripts/worker-service.cjs" "$@"
+}
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/alex.bershadsky/.docker/completions $fpath)
+fpath=("$HOME/.docker/completions" $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
