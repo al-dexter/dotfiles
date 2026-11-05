@@ -12,6 +12,9 @@
 # export CLOUDSDK_CORE_PROJECT=
 # export GOOGLE_APPLICATION_CREDENTIALS=
 
+# AWS default profile (IAM Identity Center, see ~/.aws/config)
+# export AWS_PROFILE=
+
 # Anthropic / Claude API key
 # export ANTHROPIC_API_KEY=
 

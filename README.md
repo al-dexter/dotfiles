@@ -17,6 +17,7 @@ Everything's built around topic areas. If you're adding a new area — say, "rus
 
 | Topic | Purpose |
 |-------|---------|
+| `aws` | AWS CLI default profile (set in `~/.localrc`), SSO login notes |
 | `coursier` | Coursier (Scala artifact manager) configuration |
 | `docker` | Docker CLI completions and environment |
 | `gcp` | Google Cloud SDK path and config |
