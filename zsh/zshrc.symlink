@@ -83,7 +83,8 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-. "$HOME/.local/bin/env"
+# uv (adds ~/.local/bin to PATH) — only on machines where it is installed
+[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
 
 # claude-mem worker — resolve the installed version at call time so plugin updates don't break it
 claude-mem() {
@@ -98,4 +99,4 @@ claude-mem() {
 }
 
 # direnv — per-directory env loading (Maven mirror, etc.)
-eval "$(direnv hook zsh)"
+(( $+commands[direnv] )) && eval "$(direnv hook zsh)"
