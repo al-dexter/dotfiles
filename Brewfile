@@ -49,6 +49,7 @@ brew "go"
 brew "node"
 brew "nvm"
 brew "python@3.13"
+brew "uv"
 
 # === Scala / JVM ===
 # Managed by SDKMAN
