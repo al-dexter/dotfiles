@@ -23,6 +23,7 @@ Everything's built around topic areas. If you're adding a new area — say, "rus
 | `gcp` | Google Cloud SDK path and config |
 | `git` | Git config (symlinked) and git-extras completions |
 | `golang` | Go path and environment ($GOPATH, GOROOT) |
+| `herdr` | Herdr app mods (GitLab MR and Jira sidebars), layout and keys, linked into `~/.config/herdr-app` by `install.sh`; needs `HERDR_JIRA_SITE` in `~/.localrc` and the Keychain item `herdr-jira` |
 | `homebrew` | Homebrew environment setup and Brewfile management |
 | `java` | Java environment (managed via SDKMAN) |
 | `k8s` | Kubernetes CLI (kubectl) config |

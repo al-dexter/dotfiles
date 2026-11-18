@@ -18,4 +18,7 @@
 # Anthropic / Claude API key
 # export ANTHROPIC_API_KEY=
 
+# Herdr sidebar mods (herdr/): your Jira Cloud site; the API token goes in the Keychain item herdr-jira
+# export HERDR_JIRA_SITE=https://<site>.atlassian.net
+
 # Git identity is managed separately — see git/gitconfig.local.symlink.example
