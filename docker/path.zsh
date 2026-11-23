@@ -1,9 +1,12 @@
-export PATH=$HOME/.rd/bin:$PATH
+# Podman's pkg installer registers /opt/podman/bin in /etc/paths.d, but zshrc
+# rebuilds PATH from scratch, so add it here. The docker CLI itself is the
+# Homebrew formula and talks to Podman through /var/run/docker.sock.
+[[ -d /opt/podman/bin ]] && export PATH=/opt/podman/bin:$PATH
 fpath=($HOME/.docker/completions $fpath)
 
-# Rancher Desktop's docker CLI. Regenerate _docker whenever the docker binary
-# is newer than it (i.e. after a Rancher upgrade); -nt follows the ~/.rd/bin
-# symlink to the real binary. Write to a temp file so a failed run keeps the old one.
+# Regenerate _docker whenever the docker binary is newer than it (i.e. after a
+# brew upgrade); -nt follows the Homebrew symlink to the real binary.
+# Write to a temp file so a failed run keeps the old one.
 _docker_completion=$HOME/.docker/completions/_docker
 if (( $+commands[docker] )) && [[ ! -f $_docker_completion || $commands[docker] -nt $_docker_completion ]]; then
   mkdir -p ${_docker_completion:h}
