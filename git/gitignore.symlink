@@ -7,3 +7,5 @@
 .vscode
 /IlluminatedCloud/
 .env
+
+**/.claude/settings.local.json
