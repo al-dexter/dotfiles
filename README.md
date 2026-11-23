@@ -19,7 +19,7 @@ Everything's built around topic areas. If you're adding a new area — say, "rus
 |-------|---------|
 | `aws` | AWS CLI default profile (set in `~/.localrc`), SSO login notes |
 | `coursier` | Coursier (Scala artifact manager) configuration |
-| `docker` | Docker CLI completions and environment |
+| `docker` | Homebrew docker CLI running against Podman: completions, `/opt/podman/bin` on PATH, `BUILDX_BUILDER`; `install.sh` links the compose/buildx plugins and creates the `podman-load` builder (see [Podman](#podman)) |
 | `gcp` | Google Cloud SDK path and config |
 | `git` | Git config (symlinked) and git-extras completions |
 | `golang` | Go path and environment ($GOPATH, GOROOT) |
@@ -62,6 +62,17 @@ This symlinks the appropriate files in `.dotfiles` to your home directory. Every
 ```sh
 dot
 ```
+
+### Podman
+
+`brew bundle` installs Podman Desktop, but the container engine and Compose need two clicks in the app before `docker/install.sh` can wire them up:
+
+1. Open Podman Desktop and create/start the Podman machine.
+2. **Settings → CLI Tools → Compose → Install** (puts `docker-compose` in `/usr/local/bin`).
+3. **Settings → Docker Compatibility → enable** (points `/var/run/docker.sock` at Podman).
+4. Run `script/install` again to link the plugins and create the `podman-load` buildx builder.
+
+If the Compose install fails with `cp: /usr/local/bin/docker-compose: No such file or directory`, a dangling symlink from an old Docker Desktop install is in the way — remove the broken links in `/usr/local/bin` and `~/.docker/cli-plugins` and retry.
 
 ## Thanks
 
